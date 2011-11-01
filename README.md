@@ -1,10 +1,18 @@
 BBCore: Rake Tasks for BlackBerry
 =================================
 These are a collection of [Rake](http://rake.rubyforge.org/) tasks for
-compiling BlackBerry apps. The tasks use
-[Albacore](https://github.com/derickbailey/Albacore/) libraries, so to use
-these tasks you'll need Albacore, along with Rake. These tasks are mostly based
-on the [BB Ant Tools](http://http://bb-ant-tools.sourceforge.net/) project.
+compiling BlackBerry apps. 
+
+Rake build scripts are simple, yet has the full power of Ruby. There are a
+large number of tasks available, allowing you to compile C, C++,
+[Java](http://raven.rubyforge.org/) and even .NET application from within the
+same build script. The BBCore tasks simplify the process of building BlackBerry
+apps with different features for different versions of the BlackBerry OS.
+
+The BBCore tasks use [Albacore](https://github.com/derickbailey/Albacore/)
+libraries, so to use them you'll need both Albacore and Rake. These tasks are
+mostly based on the [BB Ant Tools](http://http://bb-ant-tools.sourceforge.net/)
+project.
 
 You should read the [Albacore Getting Started
 guide](https://github.com/derickbailey/Albacore/wiki/Getting-Started) before
@@ -34,6 +42,13 @@ Installation
  4. Include the following line in your `Rakefile`.
 
         FileList["./albacore/*.rb"].each { |f| require f }
+
+Example
+-------
+Want to see how it's used in a real project? Take a look at the BBWifiMusicSync
+[Rakefile](https://github.com/nithinphilips/bbwifimusicsync/blob/master/Rakefile).
+BBWifiMusic Sync uses Rake to compile a .NET Project, two BlackBerry apps (one
+targeting OS 5, the other OS 6) from the same codebase, and an NSIS installer.
 
 Configuration
 -------------
