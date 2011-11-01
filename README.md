@@ -23,6 +23,18 @@ tasks. The calculated paths will be:
  * `<destdir>\Standard\<sdkversion>\output.xxx`, and
  * `<destdir>\Web\<sdkversion>\output.xxx`, for OTA deployable output.
 
+Installation
+------------
+ 1. [Install Ruby](http://www.ruby-lang.org/en/downloads/). An [installer
+    package](http://rubyinstaller.org/) is available for Windows
+ 2. Follow the [steps on installing Rake and
+    Albacore](https://github.com/derickbailey/Albacore/wiki)
+ 3. Place the BBCore tasks into the `albacore` subdirectory in your
+    project root.
+ 4. Include the following line in your `Rakefile`.
+
+        FileList["./albacore/*.rb"].each { |f| require f }
+
 Configuration
 -------------
 As with other Albacore tasks, the BlackBerry tasks can read configuration
