@@ -203,7 +203,10 @@ Example:
  * **midlet_class**<br/>
 
  * **icons** (alias **icon**)<br/>
-   A list of icons to be display on the ribbon.
+   A list of icons to be display on the ribbon. The icon path must be relative
+   to the output directory. If you are using the standard output paths, and
+   your icons are stored in the `res/` subdirectory, then the value of icon
+   should be `../../../res/<iconfile>`.
 
  * **focus_icons** (alias **focus_icon**)<br/>
    A list of icons that appear on hover/focus on the ribbon. Icon paths must be
@@ -344,9 +347,9 @@ Example:
 
 ###JavaAsmInfo task
 Creates a Java class with some compile-time information. This file can be used
-in manner similar to the .NET AssemblyInfo file. There is no built-in support
-for using the variables in the generated class. You must manually use the properties
-of the generated class instead of using string literals.
+in manner similar to the .NET AssemblyInfo file. Since there is no built-in
+support for using the variables in the generated class, you must manually use
+the properties of the generated class instead of using string literals.
 
 Example:
 
@@ -385,3 +388,20 @@ Example:
  * **package_name**<br/>
    The name of the package. If not specified, package keyword will be omitted.
 
+License
+-------
+
+    Copyright (C) 2011 Nithin Philips <nithin@nithinphilips.com>
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
